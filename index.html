@@ -3,48 +3,206 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f9f5">
+  <meta name="theme-color" content="#eef9fb">
   <meta name="description" content="2026년 9월 30일 인천소양초등학교 한마음 가을 운동회 전체 일정과 세부 일정 안내">
   <title>한마음 가을 운동회 | 인천소양초등학교</title>
   <style>
-    :root { color-scheme:light; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:#f6f9f5; color:#24382f; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif; line-height:1.6; }
-    main { max-width:880px; margin:auto; padding:20px; }
-    section { margin-bottom:28px; }
-    figure { margin:0; }
-    .sheet { display:block; overflow:hidden; border-radius:12px; border:1px solid #dce5da; background:white; cursor:zoom-in; }
-    picture,img { display:block; width:100%; height:auto; }
-    figcaption { text-align:center; margin-top:12px; }
-    .download { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 20px; border:1px solid #cad9ca; border-radius:999px; background:white; color:#315d46; text-decoration:none; font-size:14px; font-weight:700; }
-    .download:hover { background:#eaf0e5; }
-    a:focus-visible { outline:3px solid #b55c1c; outline-offset:4px; }
-    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
-    .hint { margin:0 0 16px; color:#58685f; font-size:12px; text-align:center; }
-    @media(max-width:480px) { main { padding:10px; } .sheet { border-radius:8px; } }
-    @media print { figcaption,.hint { display:none; } body,main { background:white; padding:0; margin:0; max-width:none; } section { margin:0; break-after:page; } section:last-of-type { break-after:auto; } .sheet { border:0; border-radius:0; } img { max-height:265mm; width:auto; max-width:100%; margin:auto; } @page { size:A4; margin:10mm; } }
+    :root{
+      --sky:#eaf9fc; --blue:#159ddd; --green:#75bd39; --green-dark:#328b13;
+      --coral:#ff6f67; --orange:#ff9f2d; --brown:#8c4c20; --ink:#1f2d2a;
+      --line:#8e9994; --paper:#fff; --soft:#f6fbfa;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+      background:linear-gradient(180deg,#eaf9fc 0,#f7fbf8 55%,#eef8ed 100%);
+      line-height:1.45;
+    }
+    .wrap{max-width:880px;margin:0 auto;padding:18px 14px 48px}
+    .jump{
+      position:sticky;top:10px;z-index:20;display:flex;gap:8px;justify-content:center;
+      width:max-content;max-width:100%;margin:0 auto 14px;padding:6px;
+      background:rgba(255,255,255,.93);backdrop-filter:blur(8px);
+      border:1px solid #dce9e5;border-radius:999px;box-shadow:0 4px 18px rgba(33,83,64,.10)
+    }
+    .jump a{
+      display:inline-flex;align-items:center;justify-content:center;min-height:38px;
+      padding:7px 14px;border-radius:999px;text-decoration:none;color:#28584b;
+      font-size:14px;font-weight:800
+    }
+    .jump a:hover,.jump a:focus-visible{background:#e8f5ed;outline:none}
+    .page{
+      position:relative;overflow:hidden;background:var(--paper);border:1px solid #dce8e5;
+      border-radius:26px;box-shadow:0 14px 40px rgba(35,79,63,.12);margin:0 0 22px;
+    }
+    .page1{background:linear-gradient(180deg,#e8f8fb 0 54%,#fdfefe 54% 100%)}
+    .page2{background:linear-gradient(180deg,#edfaff 0 78%,#e4f4e0 78% 100%)}
+    .bunting{
+      height:44px;background:
+      linear-gradient(135deg,transparent 50%,#ff6477 51%) 5% 3px/28px 31px no-repeat,
+      linear-gradient(135deg,transparent 50%,#ffc51f 51%) 15% 0/28px 31px no-repeat,
+      linear-gradient(135deg,transparent 50%,#6fc065 51%) 25% 4px/28px 31px no-repeat,
+      linear-gradient(135deg,transparent 50%,#5db9db 51%) 35% 0/28px 31px no-repeat,
+      linear-gradient(135deg,transparent 50%,#9c6ac5 51%) 45% 5px/28px 31px no-repeat,
+      linear-gradient(225deg,transparent 50%,#9c6ac5 51%) 55% 5px/28px 31px no-repeat,
+      linear-gradient(225deg,transparent 50%,#5db9db 51%) 65% 0/28px 31px no-repeat,
+      linear-gradient(225deg,transparent 50%,#6fc065 51%) 75% 4px/28px 31px no-repeat,
+      linear-gradient(225deg,transparent 50%,#ffc51f 51%) 85% 0/28px 31px no-repeat,
+      linear-gradient(225deg,transparent 50%,#ff6477 51%) 95% 3px/28px 31px no-repeat;
+    }
+    .hero{padding:8px 22px 22px;text-align:center}
+    .hero-balls{display:flex;justify-content:center;gap:10px;margin:3px 0 5px}
+    .ball{
+      display:grid;place-items:center;width:74px;height:74px;border-radius:50%;
+      color:#fff;font-size:30px;font-weight:900;letter-spacing:-2px
+    }
+    .ball:nth-child(1){background:var(--coral)} .ball:nth-child(2){background:var(--orange)} .ball:nth-child(3){background:#1da7df}
+    .hero h1{margin:0;font-size:clamp(44px,8vw,76px);line-height:1.05;letter-spacing:-5px;font-weight:950}
+    .hero h1 .fall{color:#ff716a}.hero h1 .sports{color:var(--brown)}
+    .mascot{margin:16px auto 0;display:flex;justify-content:center;align-items:flex-end;gap:34px}
+    .kid{position:relative;width:112px;height:104px}
+    .kid .head{position:absolute;left:31px;top:2px;width:52px;height:48px;background:#ffd9bb;border-radius:50%}
+    .kid .hair{position:absolute;left:26px;top:0;width:62px;height:21px;background:#6d4c3b;border-radius:50% 50% 30% 30%}
+    .kid .body{position:absolute;left:26px;top:42px;width:62px;height:54px;background:#fff;border-radius:16px}
+    .kid .shorts{position:absolute;left:32px;top:78px;width:50px;height:20px;border-radius:5px}
+    .kid .band{position:absolute;left:29px;top:14px;width:57px;height:8px;border-radius:6px}
+    .kid.red .shorts,.kid.red .band{background:#f36f73}.kid.blue .shorts,.kid.blue .band{background:#2196d2}
+    .kid:before,.kid:after{content:"";position:absolute;top:49px;width:35px;height:10px;background:#ffd642;border-radius:10px;box-shadow:0 9px 0 #ffd642,0 -9px 0 #ffd642}
+    .kid:before{left:-3px;transform:rotate(14deg)} .kid:after{right:-3px;transform:rotate(-14deg)}
+    .info-panel{margin:0 7% 7%;padding:18px 18px 10px;background:#fff;border:6px solid #76bf31;border-radius:24px}
+    .meta{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;margin-bottom:10px;font-size:18px;font-weight:700}
+    .meta div{display:flex;gap:10px;align-items:center}
+    .pill{flex:0 0 auto;display:inline-block;padding:4px 14px;border-radius:999px;background:#ff6f67;color:#fff;font-size:17px;font-weight:900}
+    table{width:100%;border-collapse:collapse;background:#fff}
+    th,td{border-bottom:1px solid #737b78;padding:6px 7px;text-align:center;vertical-align:middle}
+    .overview thead th{background:#83c744;color:#142414;font-size:17px}
+    .overview .group th{font-size:16px}
+    .overview .events td{vertical-align:top;font-size:15px;line-height:1.55;color:#505b57}
+    .time-row th{background:#83c744;font-size:17px;border-top:2px solid #66716c}
+    .full-row td{font-weight:700}
+    .school{display:flex;justify-content:center;align-items:center;gap:10px;padding:0 20px 22px;font-weight:900;color:#2e4439}
+    .crest{display:grid;place-items:center;width:42px;height:42px;border-radius:14px 14px 18px 18px;background:#1f49bb;color:#fff;font-size:11px;border:3px solid #f6c61b}
+    .school small{display:block;font-size:11px;font-weight:500;color:#6c7772}
+    .detail-card{margin:20px 7% 26px;padding:20px 20px 24px;background:#fff;border:6px solid #20a4dc;border-radius:28px}
+    .detail-card h2{margin:0 0 14px;text-align:center;color:#119dd8;font-size:clamp(38px,7vw,64px);line-height:1;font-weight:950;letter-spacing:-4px;text-shadow:0 2px 0 #fff,0 4px 0 #6a4d39}
+    .detail-table{table-layout:fixed;border:1px solid #555}
+    .detail-table + .detail-table{margin-top:20px}
+    .detail-table th{background:#199fda;color:#111;font-size:18px;border:1px solid #555;padding:5px}
+    .detail-table td{border:1px solid #777;padding:5px 8px;font-size:16px}
+    .detail-table td:first-child{width:50%;font-weight:900}
+    .detail-table td:last-child{color:#6b706e}
+    .track{height:160px;margin-top:0;background:
+      linear-gradient(180deg,transparent 0 30%,#ed7136 30% 100%);
+      position:relative
+    }
+    .track:after{content:"";position:absolute;left:0;right:0;top:78px;height:3px;background:#fff;box-shadow:0 30px 0 #fff,0 60px 0 #fff}
+    .track .runner{position:absolute;z-index:2;bottom:30px;font-size:42px;filter:saturate(.75)}
+    .track .r1{left:13%}.track .r2{left:40%}.track .r3{left:65%}.track .r4{left:84%}
+    .note{text-align:center;color:#62716a;font-size:13px;margin:14px 8px 0}
+    .print-only{display:none}
+    @media(max-width:650px){
+      .wrap{padding:8px 8px 34px}.page{border-radius:16px}.jump{top:6px;margin-bottom:8px}
+      .bunting{height:30px;background-size:20px 23px}
+      .hero{padding:4px 10px 14px}.hero-balls{gap:7px}.ball{width:54px;height:54px;font-size:23px}
+      .hero h1{font-size:44px;letter-spacing:-3px}.mascot{transform:scale(.8);height:88px;margin-top:6px}
+      .info-panel,.detail-card{margin-left:3%;margin-right:3%}.info-panel{padding:12px 8px 8px;border-width:4px}
+      .meta{grid-template-columns:1fr;font-size:14px;gap:5px}.pill{font-size:14px;padding:3px 10px}
+      .overview thead th,.time-row th{font-size:14px}.overview .group th{font-size:14px}.overview .events td{font-size:12px;padding:5px 3px}
+      th,td{padding:5px 3px}.detail-card{padding:14px 9px 18px;border-width:4px}.detail-card h2{font-size:43px}
+      .detail-table th{font-size:15px}.detail-table td{font-size:13px;padding:4px}.school{font-size:14px}
+      .track{height:120px}.track .runner{font-size:32px}
+    }
+    @media print{
+      body{background:#fff}.wrap{max-width:none;padding:0}.jump,.note{display:none}.page{box-shadow:none;border:0;border-radius:0;break-after:page;margin:0;min-height:100vh}
+      .page:last-of-type{break-after:auto}
+    }
   </style>
 </head>
-<body id="top">
-  <main>
-    <h1 class="sr-only">한마음 가을 운동회 안내장</h1>
-    <section id="overview" aria-labelledby="overview-title">
-      <h2 class="sr-only" id="overview-title">전체 일정</h2>
-      <figure>
-        <a class="sheet" href="assets/page-1.png" aria-label="전체 일정 안내장 크게 보기">
-          <picture><source type="image/webp" srcset="assets/page-1-small.webp 849w, assets/page-1.webp 1698w" sizes="(max-width:880px) calc(100vw - 24px), 840px"><img src="assets/page-1.png" width="1698" height="2400" fetchpriority="high" alt="한마음 가을 운동회 전체 일정. 1부 오전 9시~11시 45분, 점심 오전 11시 45분~오후 12시 50분, 2부 오후 1시~2시 30분. 학년별 종목은 안내장을 눌러 확대해 확인하세요."></picture>
-        </a><figcaption><a class="download" href="assets/page-1.png" download="한마음-운동회-전체-일정.png">전체 일정 이미지 저장 ↓</a></figcaption>
-      </figure>
+<body>
+  <div class="wrap">
+    <nav class="jump" aria-label="운동회 일정 바로가기">
+      <a href="#overview">전체 일정</a>
+      <a href="#details">세부 일정</a>
+    </nav>
+
+    <section class="page page1" id="overview" aria-labelledby="title">
+      <div class="bunting" aria-hidden="true"></div>
+      <header class="hero">
+        <div class="hero-balls" aria-label="한마음">
+          <span class="ball">한</span><span class="ball">마</span><span class="ball">음</span>
+        </div>
+        <h1 id="title"><span class="fall">가을</span> <span class="sports">운동회</span></h1>
+        <div class="mascot" aria-hidden="true"><div class="kid red"><i class="hair"></i><i class="head"></i><i class="body"></i><i class="shorts"></i><i class="band"></i></div><div class="kid blue"><i class="hair"></i><i class="head"></i><i class="body"></i><i class="shorts"></i><i class="band"></i></div></div>
+      </header>
+
+      <div class="info-panel">
+        <div class="meta">
+          <div><span class="pill">일시</span><span>2026년 9월 30일(수)</span></div>
+          <div><span class="pill">장소</span><span>인천소양초등학교 운동장</span></div>
+        </div>
+
+        <table class="overview" aria-label="운동회 전체 일정">
+          <thead><tr><th colspan="3">오전 9:00 ~ 11:45　　1부</th></tr></thead>
+          <tbody>
+            <tr class="group"><th>유치원·1-2학년군</th><th>3-4학년군</th><th>5-6학년군</th></tr>
+            <tr class="events">
+              <td>버블릴레이<br>카트라이더(유)<br>반지의 제왕</td>
+              <td>게이지를 높여라<br>토끼와 거북이<br>날아라 슈퍼볼<br>한마음 달리기</td>
+              <td>광광광 토르<br>발폭탄 달리기<br>주사위 레이스</td>
+            </tr>
+            <tr class="full-row"><td colspan="3">개인달리기, 계주달리기(저학년), 학부모 경기</td></tr>
+            <tr class="time-row"><th colspan="3">오전 11:45 ~ 오후 12:50　　점심시간</th></tr>
+            <tr class="time-row"><th colspan="3">오후 1:00 ~ 2:30　　2부</th></tr>
+            <tr class="group"><th>1-2학년군</th><th>3-4학년군</th><th>5-6학년군</th></tr>
+            <tr class="events"><td>열려라 참깨</td><td>도전 60초</td><td>지네발 릴레이<br>황금알 받기</td></tr>
+            <tr class="full-row"><td colspan="3">계주달리기(고학년), 레크레이션</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="school"><span class="crest">소양</span><span>인천소양초등학교<small>Incheon Soyang Elementary School</small></span></div>
     </section>
-    <section id="details" aria-labelledby="details-title">
-      <h2 class="sr-only" id="details-title">세부 일정</h2>
-      <figure>
-        <a class="sheet" href="assets/page-2.png" aria-label="세부 일정 안내장 크게 보기">
-          <picture><source type="image/webp" srcset="assets/page-2-small.webp 849w, assets/page-2.webp 1698w" sizes="(max-width:880px) calc(100vw - 24px), 840px"><img src="assets/page-2.png" width="1698" height="2400" loading="lazy" decoding="async" alt="운동회 세부 일정 안내장. 1부와 2부의 경기 종목 및 유치원부터 6학년까지 참가 대상 안내. 상세 내용은 안내장을 눌러 확대해 확인하세요."></picture>
-        </a><figcaption><a class="download" href="assets/page-2.png" download="한마음-운동회-세부-일정.png">세부 일정 이미지 저장 ↓</a></figcaption>
-      </figure>
+
+    <section class="page page2" id="details" aria-labelledby="detail-title">
+      <div class="bunting" aria-hidden="true"></div>
+      <div class="detail-card">
+        <h2 id="detail-title">세부일정</h2>
+
+        <table class="detail-table" aria-label="1부 세부 일정">
+          <thead><tr><th colspan="2">1부</th></tr></thead>
+          <tbody>
+            <tr><td>버블릴레이</td><td>유치원·1·2학년</td></tr>
+            <tr><td>카트라이더</td><td>유치원</td></tr>
+            <tr><td>광광광 토르</td><td>5·6학년</td></tr>
+            <tr><td>게이지를 높여라</td><td>3·4학년</td></tr>
+            <tr><td>반지의 제왕</td><td>유치원·1·2학년</td></tr>
+            <tr><td>발폭탄달리기</td><td>5·6학년</td></tr>
+            <tr><td>날아라 슈퍼볼</td><td>3·4학년</td></tr>
+            <tr><td>주사위레이스</td><td>5·6학년</td></tr>
+            <tr><td>한마음 달리기</td><td>3·4학년</td></tr>
+            <tr><td>계주</td><td>저학년</td></tr>
+            <tr><td colspan="2">학부모 경기</td></tr>
+          </tbody>
+        </table>
+
+        <table class="detail-table" aria-label="2부 세부 일정">
+          <thead><tr><th colspan="2">2부</th></tr></thead>
+          <tbody>
+            <tr><td>지네발 릴레이</td><td>5·6학년</td></tr>
+            <tr><td>열려라 참깨</td><td>1·2학년</td></tr>
+            <tr><td>황금알 받기</td><td>5·6학년</td></tr>
+            <tr><td>도전 60초</td><td>3·4학년</td></tr>
+            <tr><td>계주</td><td>고학년</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="track" aria-hidden="true"><span class="runner r1">🏃</span><span class="runner r2">🏃‍♀️</span><span class="runner r3">🏃</span><span class="runner r4">🏃‍♀️</span></div>
+      <div class="school"><span class="crest">소양</span><span>인천소양초등학교<small>Incheon Soyang Elementary School</small></span></div>
     </section>
-    <p class="hint">이미지를 누르면 크게 볼 수 있어요.<br>휴대폰에서 저장 버튼으로 이미지가 열리면, 이미지를 길게 눌러 저장하세요.</p>
-  </main>
+
+    <p class="note">휴대폰에서는 위의 ‘전체 일정 / 세부 일정’ 버튼으로 빠르게 이동할 수 있습니다.</p>
+  </div>
 </body>
 </html>
